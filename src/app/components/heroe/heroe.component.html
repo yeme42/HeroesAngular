@@ -1,0 +1,28 @@
+<div style=" background: linear-gradient(rgb(5, 176, 244), rgb(5, 252, 108)); ">
+<div class="container">
+    <h1 class="animated fadeIn">({{ heroe.nombre |uppercase }}) <small> {{ heroe.aparicion | date:'y'}}</small></h1>
+    <hr>
+    <div class="row animated fadeIn fast">
+
+        <div class="col-12 col-md-4">
+            <img src="{{heroe.img}}" alt="{{heroe.nombre}}">
+            <br><br>
+            <a (click)="devolver()" class="btn btn-outline-danger btn-block m-2"> Regresar</a>
+        </div>
+        <div class="col-12 col-md-4 justify-content-center">
+            <h3>{{heroe.nombre}}</h3>
+            <hr>
+            <p>
+                {{heroe.bio}}
+            </p>
+            <div class="row m-2">
+                <img class="col-12 col-md-6" *ngIf="heroe.casa === 'DC' " src="assets/img/dc.png" alt="heroe">
+                <img class="col-12 col-md-6" *ngIf="heroe.casa === 'Marvel' " src="assets/img/marvel.jpg" alt="heroe">
+            </div>
+
+        </div>
+        
+    </div>
+    
+</div>
+</div>
